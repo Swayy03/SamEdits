@@ -26,14 +26,18 @@ public class Mavenproject2 {
         
         for(int i=1;i<=rounds;i++){//Enter for loop
             System.out.print("Round "+i+": ");
-            System.out.println("Enter the lucky number: ");
-            int luckyNumber=LuckyNumber.nextInt();
-            //keys in lucky number
-            
+           
+            //generate random number(secret number)
             Random rand=new Random();
             int upperbound=100;
             int randomNumber=rand.nextInt(upperbound);
-            //generate random number(secret number)
+           //System.out.println("The random Number is:" + randomNumber);
+           
+           //prompt input for lucky number
+            System.out.println("Enter the lucky number: ");
+           //key in the lucky number as int
+            int luckyNumber=LuckyNumber.nextInt();
+            
             
             result=luckyNumber%randomNumber;
             //result of lucky number % secret Number
@@ -52,9 +56,9 @@ public class Mavenproject2 {
             }
         }
         if(score>0){
-            System.out.println("Congratulations!!!!!!YOU WON THE GAME!!");
+            System.out.println("Congratulations!!!!!!YOU WON THE GAME!! by " + score + "points");
         }
         else
-            System.out.println("SORRY.....YOU LOST");
+            System.out.println("SORRY.....YOU LOST by " + score + "points");
     }
 }
